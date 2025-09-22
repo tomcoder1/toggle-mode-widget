@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    overflow:hidden;
+    background-color:rgba(254, 254, 254, 0.7);
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: min(100vh, 100vw);
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-w: 70vw;
+    --btn-h: 30vh;
+    --pad: 3vw;
+    --knob: calc(var(--btn-h) - var(--pad) * 2);
+    --mar: 5vh;
+}
+
+.btn {
+    width: var(--btn-w);
+    height: var(--btn-h);
+    padding: var(--pad);
+    margin: var(--mar);
+    border: none;
+    border-radius: 9999px;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    transition: background 0.1s ease;
+}
+
+.inside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: var(--pad);
+    left: var(--pad);
+    width: var(--knob);
+    height: var(--knob);
+    border-radius: 9999px;
+    background: #fff;
+    transition: left 0.2s ease;
+    overflow: hidden;
+}
+
+.inside > svg {
+    width: 75%;
+    height: 75%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn.on {
+    background: #0a7bff;
+}
+
+.btn.on .inside {
+    left: calc(100% - var(--pad) - var(--knob));
+}

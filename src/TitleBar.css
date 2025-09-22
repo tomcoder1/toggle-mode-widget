@@ -1,0 +1,41 @@
+:root {
+    --titlebar-h: 20px;
+    --titlebar-bg: rgba(0, 0, 0, 0);
+    --tb-fg: rgb(200, 200, 200);
+    --tb-fg-hover: rgb(255, 255, 255);
+    --tb-btn-hover: rgba(113, 113, 113, 0.5);
+}
+
+.title-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--titlebar-h);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--titlebar-bg);
+    -webkit-app-region: drag;
+    user-select: none;
+    z-index: 1000;
+}
+
+.title-bar .right-section {
+    margin-right: 3px;
+    display: flex;
+}
+
+.bton {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin: 2px;
+    color: var(--tb-fg);
+    -webkit-app-region: no-drag;
+}
+
+.bton:hover {
+    background-color: var(--tb-btn-hover);
+    border-radius: 2px;
+    color: var(--tb-fg-hover);
+}

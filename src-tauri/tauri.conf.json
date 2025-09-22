@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "toggle-mode-widget",
+  "version": "0.1.0",
+  "identifier": "com.ptomm.toggle-mode-widget",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "toggle-mode-widget",
+        "width": 200,
+        "height": 200,
+        "resizable": false,
+        "alwaysOnBottom": true,
+        "decorations": false,
+        "fullscreen": false,
+        "skipTaskbar": true,
+        "transparent": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.icns",
+      "icons/128x128.png"
+    ]
+  }
+}
