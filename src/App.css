@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     overflow:hidden;
-    background-color:rgba(254, 254, 254, 0.7);
+    background-color:rgba(220, 220, 220, 0.85);
     margin: 0;
     padding: 0;
 }
